@@ -1,4 +1,5 @@
 <?php
+
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -97,7 +98,7 @@ $main_data = [
     <!-- /header -->
 
     <!-- main -->
-    <main>
+    <main class="dimension">
         <?php for($i = 0; $i < count($main_data); $i++) { ?>
             <?php 
             $current_main = $main_data[$i];
@@ -127,7 +128,26 @@ $main_data = [
     <!-- /main -->
 
     <!-- footer-->
-    <footer> <h2>footer</h2> </footer>
+    <footer> 
+        <div class="foot-cont dimension flex">
+            <div class="left">
+                <ul class="flex">
+                    <li class="none">Google</li>
+                    <li>Tutto suGoogle</li>
+                    <li>Privacy</li>
+                    <li>Termini</li>
+                </ul>
+            </div>
+            <div class="right">
+                <label for="lang"><i class="fas fa-comment-alt"></i></label>
+                <select name="" id="lang">
+                    <option value="">Italiano</option>
+                    <option value="">English</option>
+                    <option value="">Deutsch</option>
+                </select>
+            </div>
+        </div>
+    </footer>
     <!-- /footer -->
 </body>
 </html>
