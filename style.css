@@ -5,12 +5,68 @@
     box-sizing: border-box;
 }
 
-header,
-footer{
-    text-align: center;
-    line-height: 100px;
+/* common */
+body{
+    font-family: 'Open Sans', sans-serif;
 }
 
+img{
+    width: 80px;
+    margin-right: .2em;
+}
+
+.flex{
+    display: flex;
+}
+
+/* header */
+.container{
+    padding: 1em;
+    justify-content: space-between;
+}
+
+.logo{
+    color: gray;
+}
+
+.icon i{
+    font-size: 1.5em;
+    vertical-align: middle;
+}
+
+.icon span{
+    background-color: #5c4343;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 10px;
+    margin-left: 1em;
+}
+
+.list-menu{
+    border-bottom: 1px solid lightgray;
+}
+
+ul{
+    list-style: none;
+}
+
+ul li{
+    padding: .5em 0;
+    margin: 0 2em 0 1em;
+    cursor: pointer;
+}
+
+.blue{
+    color: blue;
+    border-bottom: 3px solid blue;
+}
+
+ul li:hover{
+    color: blue;
+    border-bottom: 3px solid blue;
+}
+
+/* main */
 main{
     width: 80%;
     margin: 0 auto;
