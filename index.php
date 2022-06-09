@@ -72,32 +72,29 @@ $main_data = [
     <!-- main -->
     <main>
         <?php for($i = 0; $i < count($main_data); $i++) { ?>
-            <?php $current_main = $main_data[$i]; ?>
-            <?php for ($j=0; $j < count($current_main); $j++) { ?> 
-               <?php 
-               $current_question = $current_main['question'];
-               $current_answer = $current_main['answer'];
-               $explode_answer = explode("/", $current_answer);
-               $current_subtitle = $current_main['subtitle'];
-               $current_paragraph = $current_main['paragraph'];
-               $explode_paragraph = explode("/", $current_paragraph);
-               ?>
-               <div>
-               <h2 class="question-title"><?php echo $current_question; ?></h2>
-               <p>
-                   <?php foreach($explode_answer as $value){
-                    echo "<p class=ans >" . $value . "</p>";
-                   } ?>
-               </p>
-               <h3> <?php echo $current_subtitle; ?>  </h3>
-               <p>
-                   <?php foreach($explode_paragraph as $value){
-                    echo "<p class=ans >" . $value . "</p>";
-                   } ?>
-               </p>
-               </div>
-                
-               <?php } ?>
+            <?php 
+            $current_main = $main_data[$i];
+            $explode_answer = explode("/", $current_main['answer']);
+            $explode_paragraph = explode("/", $current_main['paragraph']);
+            ?>
+            <h2 class="question-title">
+                <?php echo $current_main['question']; ?>
+            </h2>
+
+            <p>
+            <?php 
+            foreach($explode_answer as $value){
+            echo "<p class=ans >" . $value . "</p>";
+            } ?>
+            </p>
+
+            <h3> <?php echo $current_main['subtitle']; ?>  </h3>
+
+            <p>
+                <?php foreach($explode_paragraph as $value){
+                echo "<p class=ans >" . $value . "</p>";
+            } ?>
+    </p>
         <?php } ?>
     </main>
     <!-- /main -->
